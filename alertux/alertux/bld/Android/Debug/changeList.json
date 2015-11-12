@@ -473,7 +473,6 @@
     "plugins\\org.loicknuchel.cordova.deviceaccounts\\src\\android\\DeviceAccounts.java",
     "plugins\\org.apache.cordova.globalization\\src\\blackberry10\\native\\public\\json\\forwards.h",
     "plugins\\org.apache.cordova.camera\\www\\blackberry10\\assets\\camera.html",
-    "www\\js\\Alerta.js",
     "www\\hpneo-gmaps-21919a6\\examples\\polylines.html",
     "plugins\\cordova-plugin-social-message\\src\\ios\\SocialMessage.m",
     "plugins\\cordova-plugin-social-message\\src\\ios\\SocialMessage.h",
@@ -1075,11 +1074,12 @@
     "plugins\\org.apache.cordova.media-capture\\src\\ios\\CDVCapture.m",
     "plugins\\org.apache.cordova.media-capture\\src\\ios\\CDVCapture.h",
     "plugins\\org.apache.cordova.camera\\src\\ubuntu\\camera.h",
-    "www\\js\\maps.js",
-    "www\\js\\inicio.js",
-    "www\\js\\comentar.js"
+    "www\\js\\FloatingActionButton.js",
+    "www\\NuevaAlerta.html"
   ],
-  "deletedFilesIos": [],
+  "deletedFilesIos": [
+    "npm-debug.log"
+  ],
   "addedPluginsIos": [
     "org.apache.cordova.camera@0.3.6",
     "org.apache.cordova.geolocation@0.3.12",
@@ -1099,7 +1099,10 @@
     "cordova-plugin-social-message@0.3.1"
   ],
   "deletedPluginsIos": [],
-  "changedFiles": [],
+  "changedFiles": [
+    "www\\NuevaAlerta.html",
+    "www\\js\\FloatingActionButton.js"
+  ],
   "deletedFiles": [],
   "addedPlugins": [],
   "deletedPlugins": []
