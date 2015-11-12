@@ -1,0 +1,71 @@
+﻿<link href="nativeDroid2-master/css/material-design-iconic-font.min.css" rel="stylesheet" />
+<link href="material-floating-button-master/dist/mfb.css" rel="stylesheet" />
+<ul id="menu" class="mfb-component--br mfb-zoomin" data-mfb-toggle="click" data-mfb-state="closed">
+    <li class="mfb-component__wrap">
+        <a href="#" class="mfb-component__button--main">
+            <i class="mfb-component__main-icon--resting ion-plus-round"></i>
+            <i class="mfb-component__main-icon--active ion-close-round"></i>
+        </a>
+        <ul class="mfb-component__list">
+            <li>
+                <a href="https://github.com/nobitagit/material-floating-button/" data-mfb-label="Nueva Alerta" class="mfb-component__button--child">
+                    <i class="mfb-component__child-icon NuevoAlerta">
+                    </i>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/nobitagit" data-mfb-label="Follow me on Github" class="mfb-component__button--child">
+                    <i class="mfb-component__child-icon ion-social-octocat"></i>
+                </a>
+            </li>
+
+            <li>
+                <a href="http://twitter.com/share?text=Check this material floating button component!&amp;url=http://nobitagit.github.io/material-floating-button/&amp;hashtags=material,design,button,css" data-mfb-label="Share on Twitter" class="mfb-component__button--child">
+                    <i class="mfb-component__child-icon ion-social-twitter"></i>
+                </a>
+            </li>
+        </ul>
+    </li>
+</ul>
+<script src="js/FloatingAction.js"></script>
+<script src="material-floating-button-master/dist/lib/modernizr.touch.js"></script>
+<script src="material-floating-button-master/dist/mfb.js"></script>
+<script>
+
+    var panel = document.getElementById('panel'),
+        menu = document.getElementById('menu'),
+        showcode = document.getElementById('showcode'),
+        selectFx = document.getElementById('selections-fx'),
+        selectPos = document.getElementById('selections-pos'),
+        // demo defaults
+        effect = 'mfb-zoomin',
+        pos = 'mfb-component--br';
+
+    showcode.addEventListener('click', _toggleCode);
+    selectFx.addEventListener('change', switchEffect);
+    selectPos.addEventListener('change', switchPos);
+
+    function _toggleCode() {
+      panel.classList.toggle('viewCode');
+    }
+
+    function switchEffect(e){
+      effect = this.options[this.selectedIndex].value;
+      renderMenu();
+    }
+
+    function switchPos(e){
+      pos = this.options[this.selectedIndex].value;
+      renderMenu();
+    }
+
+    function renderMenu() {
+      menu.style.display = 'none';
+      // ?:-)
+      setTimeout(function() {
+        menu.style.display = 'block';
+        menu.className = pos + effect;
+      },1);
+    }
+
+</script>

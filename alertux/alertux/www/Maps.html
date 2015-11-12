@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="http://twitter.github.com/bootstrap/1.3.0/bootstrap.min.css" />
+    <link href="hpneo-gmaps-21919a6/examples/examples.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="nativeDroid2-master/css/material-design-iconic-font.min.css" rel="stylesheet" />
+    <link href="nativeDroid2-master/vendor/jquerymobile/jquery.mobile.min.css" rel="stylesheet" />
+    <link href="nativeDroid2-master/vendor/waves/waves.min.css" rel="stylesheet" />
+    <link href="nativeDroid2-master/vendor/wow/animate.css" rel="stylesheet" />
+    <link href="nativeDroid2-master/css/nativedroid2.css" rel="stylesheet" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Raleway:100,200,300,400" rel="stylesheet" type="text/css">
+   
+</head>
+<body  onload="onLoad()">
+    
+
+    <div data-role="page" class="page" style="display: none;">
+
+        <nd2-include data-src="NavigationAlertux.html"></nd2-include>
+
+
+
+        <div data-role="header" data-position="fixed" class="wow fadeInDown" data-wow-delay="0.2s">
+            <a href="#leftpanel" class="ui-btn ui-btn-left wow fadeIn" data-wow-delay='0.8s'><i class="zmdi zmdi-menu"></i></a>
+            <h1>Mapas</h1>
+            <a id="btnActualizar" class="ui-btn ui-btn-right wow fadeIn" data-wow-delay='0.8s'><i class="zmdi zmdi-refresh-alt"></i></a><!---actualizar PROGRAMAR--->
+        </div>
+
+
+
+
+        
+            <div id="map"></div>
+
+
+        
+    </div>
+
+
+ 
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="hpneo-gmaps-21919a6/gmaps.js"></script>
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script src="js/angular.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.mobile.min.js"></script>
+    <script src="nativeDroid2-master/vendor/waves/waves.min.js"></script>
+    <script src="nativeDroid2-master/vendor/wow/wow.min.js"></script>
+    <script src="nativeDroid2-master/js/nativedroid2.js"></script>
+    <script src="js/Maps.js"></script>
+
+
+
+</body>
+</html>

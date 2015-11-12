@@ -1,0 +1,2 @@
+C:\Android\AlertuxIos\alertux\alertux\platforms\windows\build\phone\debug\arm\GlobalizationProxy.winmd
+C:\Android\AlertuxIos\alertux\alertux\platforms\windows\build\phone\bld\CordovaApp.Phone.jsprojResolveAssemblyReference.cache

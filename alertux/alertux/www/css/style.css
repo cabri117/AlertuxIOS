@@ -1,0 +1,91 @@
+
+div[data-role="content"] {
+    position: absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    background:#303030;
+}
+
+
+
+form {
+  width: 100%;
+  margin: 17% auto;
+}
+
+
+.center {
+    text-align: center;
+    margin: 0 auto
+}
+
+
+.HeaderDescripcion{
+    color: #FDFCFB;
+    text-align: center;
+    font-size:20px;
+    letter-spacing:1px;
+    margin-top:24px;
+}
+
+.Descripcion{
+    color: #BFBFBF;
+    text-align: center;
+    font-size:14px;
+    letter-spacing:1px;
+    margin-top:35px;
+}
+
+.ui-input-text input, .ui-input-search input, textarea.ui-input-text.ui-textinput-autogrow {
+    background: #303030;
+    text-shadow: initial;
+    
+}
+
+.input {
+    margin-top:50%;
+}
+
+.ui-body-a, .ui-page-theme-a .ui-body-inherit, html .ui-bar-a .ui-body-inherit, html .ui-body-a .ui-body-inherit, html body .ui-group-theme-a .ui-body-inherit, html .ui-panel-page-container-a {
+    color: #ffffff;
+}
+
+
+.ui-page-theme-a .ui-btn.ui-btn-raised.ui-disabled {
+	box-shadow: none;
+	background-color: rgba(0,0,0,0.24);
+	color: #ffffff;
+}
+
+.btn {
+  background: #bdbdbd;
+  background-image: -webkit-linear-gradient(top, #bdbdbd, #bdbdbd);
+  background-image: -moz-linear-gradient(top, #bdbdbd, #bdbdbd);
+  background-image: -ms-linear-gradient(top, #bdbdbd, #bdbdbd);
+  background-image: -o-linear-gradient(top, #bdbdbd, #bdbdbd);
+  background-image: linear-gradient(to bottom, #bdbdbd, #bdbdbd);
+  font-family: Arial;
+  color: #000000;
+  font-size: 17px;
+  padding: 10px 20px 10px 20px;
+  border: solid #2c3033 2px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #ffffff !important;
+  background-image: -webkit-linear-gradient(top, #ffffff, #ffffff);
+  background-image: -moz-linear-gradient(top, #ffffff, #ffffff);
+  background-image: -ms-linear-gradient(top, #ffffff, #ffffff);
+  background-image: -o-linear-gradient(top, #ffffff, #ffffff);
+  background-image: linear-gradient(to bottom, #ffffff, #ffffff);
+  text-decoration: none;
+}
+
+.btnClass{
+     margin-top:30%;
+}
+
+

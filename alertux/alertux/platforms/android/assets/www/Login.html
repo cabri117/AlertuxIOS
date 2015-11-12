@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <link href="nativeDroid2-master/vendor/jquerymobile/jquery.mobile.min.css" rel="stylesheet" />
+    <link href="nativeDroid2-master/css/nativedroid2.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+</head>
+<body>
+    <div data-role="page" class="page" style="display: none;">
+        <div data-role="content" data-position="fixed">
+            <form name="form1" onSubmit="return false;" >
+                <div class="center">
+                    <img  src="img/logo_alertux2.png" />
+                    <h1 class="HeaderDescripcion">Sin Correo Registrado</h1>
+                    <h1 class="Descripcion">Alertux esta casí listo. Si estas interesado en usarlo, entonces registre su correo electronico.</h1>
+                </div>
+                <input type="text" name="name2" id="name2b" class="input" value="" data-clear-btn="true" placeholder="Escriba Correo Aqui..." onSubmit="return false;" oninput="CheckCorreo();">
+                </form>
+
+            <div class="center btnClass">
+                <a id="btn" class="btn center" style="display: none;">Continuar</a>
+            </div>
+            
+        </div>
+    </div>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/jquery.mobile.min.js"></script>
+        <script src="nativeDroid2-master/vendor/waves/waves.min.js"></script>
+        <script src="nativeDroid2-master/vendor/wow/wow.min.js"></script>
+        <script src="nativeDroid2-master/js/nativedroid2.js"></script>
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+        <script src="js/Login.js"></script>
+</body>
+
+</html>

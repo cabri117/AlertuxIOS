@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="nativeDroid2-master/css/material-design-iconic-font.min.css" rel="stylesheet" />
+    <link href="nativeDroid2-master/vendor/jquerymobile/jquery.mobile.min.css" rel="stylesheet" />
+    <link href="nativeDroid2-master/vendor/waves/waves.min.css" rel="stylesheet" />
+    <link href="nativeDroid2-master/vendor/wow/animate.css" rel="stylesheet" />
+    <link href="nativeDroid2-master/css/nativedroid2.css" rel="stylesheet" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Raleway:100,200,300,400" rel="stylesheet" type="text/css">
+    <link href="css/Profile.css" rel="stylesheet" />
+    <link href="css/m.css" rel="stylesheet" />
+</head>
+
+<body onload="onLoad()">
+
+
+    <div data-role="page" class="page" style="display: none;" data-position="fixed">
+        <div data-role="header" data-position="fixed" class="wow fadeInDown" data-wow-delay="0.2s">
+            <a id="btnBack" class="ui-btn ui-btn-left wow fadeIn" data-wow-delay='0.8s'><i class="zmdi zmdi-assignment-return"></i></a><!---Back Button PROGRAMAR--->
+            <h1>Editar Perfil</h1>
+            <a  id="btnSave" class="ui-btn ui-btn-right wow fadeIn" data-wow-delay='0.8s'><i class="zmdi zmdi-archive"></i></a><!---SAVE PROGRAMAR--->
+        </div>
+
+        <div id="ProfileContent" data-role="content" data-position="fixed">
+            <div id="Content" class="CardBackground">
+                <div id="IMG" class="center">
+                    <a id="BtnImage" href="#">  <img class="ProfilePhoto" id="myimage" src="" style="width:50px; height:50px;"> </a> 
+                </div>
+            </div>
+
+        </div>
+
+                <label for="name2b">Nombre:</label> <input type="text" name="name2" id="name2b nombre" class="input" value="" data-clear-btn="true">
+                <label for="name2b">Descripción:</label> <input type="text" name="name2" id="name2b descrip" class="input" value="" data-clear-btn="true">
+
+
+                <div class="center-xs">
+                    <img src="img/logo_alertux2.png" />
+                </div>
+            </div>
+
+            <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+            <script src="js/angular.js"></script>
+            <script src="js/jquery.min.js"></script>
+            <script src="js/jquery-ui.min.js"></script>
+            <script src="js/jquery.mobile.min.js"></script>
+            <script src="nativeDroid2-master/vendor/waves/waves.min.js"></script>
+            <script src="nativeDroid2-master/vendor/wow/wow.min.js"></script>
+            <script src="nativeDroid2-master/js/nativedroid2.js"></script>
+            <script src="js/Profile.js"></script>
+
+
+</body>
+</html>

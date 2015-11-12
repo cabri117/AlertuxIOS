@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="nativeDroid2-master/css/material-design-iconic-font.min.css" rel="stylesheet" />
+    <link href="nativeDroid2-master/vendor/jquerymobile/jquery.mobile.min.css" rel="stylesheet" />
+    <link href="nativeDroid2-master/vendor/waves/waves.min.css" rel="stylesheet" />
+    <link href="nativeDroid2-master/vendor/wow/animate.css" rel="stylesheet" />
+    <link href="nativeDroid2-master/css/nativedroid2.css" rel="stylesheet" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Raleway:100,200,300,400" rel="stylesheet" type="text/css">
+    <link href="css/Comentar.css" rel="stylesheet" />
+</head>
+<body onload="onLoad()">
+
+    <div data-role="page" class="page" style="display: none;">
+
+        <div data-role="header" data-position="fixed" class="wow fadeInDown" data-wow-delay="0.2s">
+            <a id="btnBack" class="ui-btn ui-btn-left wow fadeIn" data-wow-delay='0.8s'><i class="zmdi zmdi-assignment-return"></i></a><!---Back Button PROGRAMAR--->
+            <h1 class="H1HEADER">
+                <img class="imgHeader" src="img/logo_alertux2.png" style="width:70px; height:25px;"/>
+            </h1>
+        </div>
+
+        <div data-role="content" id="Alertas" data-position="fixed">
+
+            
+                <div class="nd2-card">
+
+                    <div class="card-title has-avatar">
+                        <img class="card-avatar" id="FotoPerfil" src="" ><!---Avatar--->
+                        <h3 class="card-primary-title" id="Nombre"></h3><!---Nombre--->
+                        <h5 class="card-subtitle" id="Ubicacion"></h5><!---Pais--->
+                    </div>
+
+                    <div class="card-media" style="display: none;">
+                        <img id="FotoMedia" src="" style="width:520px; height:230px;"><!---Imagen--->
+                    </div>
+
+                    <div class="card-supporting-text has-action" id="Alerta">
+                        <!--Alerta--->
+                    </div>
+
+                    
+
+                </div>
+
+
+            <ul id="IDListView" data-role="listview" data-icon="false" class="ui-listview">
+              
+        
+                
+            </ul>
+
+
+             <input type="text" name="name2" id="name2b nombre" placeholder="Enviar Comentario" class="input" value="" data-clear-btn="true">
+
+            <div class="center btnClass">
+                <a id="btn" class="btn center">Enviar</a>
+            </div>
+
+
+            </div>
+
+        </div>
+  
+    
+    
+        <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+        <script src="js/angular.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery-ui.min.js"></script>
+        <script src="js/jquery.mobile.min.js"></script>
+        <script src="nativeDroid2-master/vendor/waves/waves.min.js"></script>
+        <script src="nativeDroid2-master/vendor/wow/wow.min.js"></script>
+        <script src="nativeDroid2-master/js/nativedroid2.js"></script>
+        <script src="js/Comentar.js"></script>
+
+</body>
+</html>
