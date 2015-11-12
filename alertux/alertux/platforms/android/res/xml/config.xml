@@ -73,6 +73,7 @@
     <preference name="FadeSplashScreenDuration" value="1.0" />
     <preference name="windows-target-version" value="8.1" />
     <preference name="windows-phone-target-version" value="8.1" />
+    <preference name="Orientation" value="portrait" />
     <vs:plugin name="org.apache.cordova.camera" version="0.3.6" />
     <vs:plugin name="org.apache.cordova.geolocation" version="0.3.12" />
     <vs:plugin name="org.apache.cordova.globalization" version="0.3.4" />
