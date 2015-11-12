@@ -1,0 +1,45 @@
+﻿.titlewrap .dl, .titlewrap .dr{
+    vertical-align:middle;
+}
+.titlewrap .title{
+    display:inline-block;
+    *display:inline;
+    font-size:15px;
+    color:#8e8e8b;
+}
+
+
+.MarginForm{
+    margin-top: 10%;
+}
+
+html { overflow-y: hidden;
+       overflow:hidden;
+       overflow-x: hidden;
+}
+
+
+.MarginButton{
+    margin-top: 50%;
+
+    padding-top: 30px;
+}
+
+.btnAlerta {
+  background: #d93434;
+  background-image: -webkit-linear-gradient(top, #d93434, #ff0000);
+  background-image: -moz-linear-gradient(top, #d93434, #ff0000);
+  background-image: -ms-linear-gradient(top, #d93434, #ff0000);
+  background-image: -o-linear-gradient(top, #d93434, #ff0000);
+  background-image: linear-gradient(to bottom, #d93434, #ff0000);
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.btnAlerta:hover {
+  background: #fc3c3c;
+  text-decoration: none;
+}

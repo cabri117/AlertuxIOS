@@ -56,6 +56,7 @@ C:\Android\AlertuxIOSGIT\alertux\alertux\platforms\android\assets\www\css\font-a
 C:\Android\AlertuxIOSGIT\alertux\alertux\platforms\android\assets\www\css\index.css \
 C:\Android\AlertuxIOSGIT\alertux\alertux\platforms\android\assets\www\css\m.css \
 C:\Android\AlertuxIOSGIT\alertux\alertux\platforms\android\assets\www\css\Maps.css \
+C:\Android\AlertuxIOSGIT\alertux\alertux\platforms\android\assets\www\css\NuevaAlerta.css \
 C:\Android\AlertuxIOSGIT\alertux\alertux\platforms\android\assets\www\css\Profile.css \
 C:\Android\AlertuxIOSGIT\alertux\alertux\platforms\android\assets\www\css\style.css \
 C:\Android\AlertuxIOSGIT\alertux\alertux\platforms\android\assets\www\hpneo-gmaps-21919a6\bower.json \
@@ -151,6 +152,7 @@ C:\Android\AlertuxIOSGIT\alertux\alertux\platforms\android\assets\www\img\comu_m
 C:\Android\AlertuxIOSGIT\alertux\alertux\platforms\android\assets\www\img\disturbios1.png \
 C:\Android\AlertuxIOSGIT\alertux\alertux\platforms\android\assets\www\img\FAVORITOS.png \
 C:\Android\AlertuxIOSGIT\alertux\alertux\platforms\android\assets\www\img\icon.png \
+C:\Android\AlertuxIOSGIT\alertux\alertux\platforms\android\assets\www\img\ic_gps.png \
 C:\Android\AlertuxIOSGIT\alertux\alertux\platforms\android\assets\www\img\ionic.png \
 C:\Android\AlertuxIOSGIT\alertux\alertux\platforms\android\assets\www\img\logo_alertux2.png \
 C:\Android\AlertuxIOSGIT\alertux\alertux\platforms\android\assets\www\img\logo_alertux_home_bottom.png \
@@ -181,6 +183,7 @@ C:\Android\AlertuxIOSGIT\alertux\alertux\platforms\android\assets\www\js\jquery.
 C:\Android\AlertuxIOSGIT\alertux\alertux\platforms\android\assets\www\js\Login.js \
 C:\Android\AlertuxIOSGIT\alertux\alertux\platforms\android\assets\www\js\Maps.js \
 C:\Android\AlertuxIOSGIT\alertux\alertux\platforms\android\assets\www\js\NavigationListView.js \
+C:\Android\AlertuxIOSGIT\alertux\alertux\platforms\android\assets\www\js\NuevaAlerta.js \
 C:\Android\AlertuxIOSGIT\alertux\alertux\platforms\android\assets\www\js\Profile.js \
 C:\Android\AlertuxIOSGIT\alertux\alertux\platforms\android\assets\www\js\services.js \
 C:\Android\AlertuxIOSGIT\alertux\alertux\platforms\android\assets\www\material-floating-button-master\demo \

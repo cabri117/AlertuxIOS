@@ -1,9 +1,82 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="nativeDroid2-master/css/material-design-iconic-font.min.css" rel="stylesheet" />
+    <link href="nativeDroid2-master/vendor/jquerymobile/jquery.mobile.min.css" rel="stylesheet" />
+    <link href="nativeDroid2-master/vendor/waves/waves.min.css" rel="stylesheet" />
+    <link href="nativeDroid2-master/vendor/wow/animate.css" rel="stylesheet" />
+    <link href="nativeDroid2-master/css/nativedroid2.css" rel="stylesheet" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Raleway:100,200,300,400" rel="stylesheet" type="text/css">
+    <link href="css/NuevaAlerta.css" rel="stylesheet" />
+    <link href="css/Comentar.css" rel="stylesheet" />
 </head>
-<body>
-    <div>Content goes here.</div>
+<body onload="onLoad()">
+    <div data-role="page" class="page" style="display: none;" >
+
+        
+
+
+
+        <div data-role="header" data-position="fixed" class="wow fadeInDown" data-wow-delay="0.2s">
+            <a id="btnBack" class="ui-btn ui-btn-left wow fadeIn" data-wow-delay='0.8s'><i class="zmdi zmdi-assignment-return"></i></a><!---Back Button PROGRAMAR--->
+            <h1 class="H1HEADER">
+                <img class="imgHeader" src="img/logo_alertux2.png" style="width:70px; height:25px;" />
+            </h1>
+        </div>
+
+        <div data-role="content"  data-position="fixed">
+
+
+            <input type="text" name="name2" id="name2b Alerta" placeholder="Nueva Alerta" class="input MarginForm" value="" data-clear-btn="true">
+
+
+            <div class="titlewrap MarginForm">
+                            <img src="img/ic_gps.png" class="dl">
+                            <h1 id="Ubicacion" class="title">Ubicando...</h1>
+                            
+                </div>
+            <div class="MarginForm">
+                <select name="select-choice-1" id="select-choice-1b" data-native-menu="false">
+                    <option value="1">Vialidad/Tránsito</option>
+                    <option value="2">Seguridad/Delincuencia</option>
+                    <option value="3">Catástrofes</option>
+                    <option value="4">Clima/Meteorología</option>
+                    <option value="5">Servicios Comunitarios</option>
+                    <option value="6">Desorden público</option>
+                    <option value="8">Otros</option>
+                </select>
+
+            </div>
+
+            <div class="center MarginButton">
+                <a id="btn" class="btnAlerta center">Alertar</a>
+            </div>
+
+
+
+
+            </div>
+
+
+        
+    </div>
+
+
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script src="js/angular.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.mobile.min.js"></script>
+    <script src="nativeDroid2-master/vendor/waves/waves.min.js"></script>
+    <script src="nativeDroid2-master/vendor/wow/wow.min.js"></script>
+    <script src="nativeDroid2-master/js/nativedroid2.js"></script>
+    <script src="js/NuevaAlerta.js"></script>
 </body>
 </html>
