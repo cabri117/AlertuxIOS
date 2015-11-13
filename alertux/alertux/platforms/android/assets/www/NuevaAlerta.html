@@ -25,44 +25,57 @@
 
 
         <div data-role="header" data-position="fixed" class="wow fadeInDown" data-wow-delay="0.2s">
-            <a id="btnBack" class="ui-btn ui-btn-left wow fadeIn" data-wow-delay='0.8s'><i class="zmdi zmdi-assignment-return"></i></a><!---Back Button PROGRAMAR--->
+            <a id="btnBack" class="ui-btn ui-btn-left wow fadeIn" data-wow-delay='0.8s'><i class="ion-android-arrow-back"></i></a><!---Back Button PROGRAMAR--->
             <h1 class="H1HEADER">
                 <img class="imgHeader" src="img/logo_alertux2.png" style="width:70px; height:25px;" />
             </h1>
+            <a id="btn" class="ui-btn wow ui-btn-right"><i class="ion-paper-airplane"></i></a>
         </div>
 
         <div data-role="content"  data-position="fixed">
 
 
-            <input type="text" name="name2" id="name2b Alerta" placeholder="Nueva Alerta" class="input MarginForm" value="" data-clear-btn="true">
-
-
-            <div class="titlewrap MarginForm">
-                            <img src="img/ic_gps.png" class="dl">
-                            <h1 id="Ubicacion" class="title">Ubicando...</h1>
-                            
+            <div class="nd2-card">
+                <div class="center">
+                    <img src="img/logo_alertux2.png" />
                 </div>
-            <div class="MarginForm">
-                <select name="select-choice-1" id="select-choice-1b" data-native-menu="false">
-                    <option value="1">Vialidad/Tránsito</option>
-                    <option value="2">Seguridad/Delincuencia</option>
-                    <option value="3">Catástrofes</option>
-                    <option value="4">Clima/Meteorología</option>
-                    <option value="5">Servicios Comunitarios</option>
-                    <option value="6">Desorden público</option>
-                    <option value="8">Otros</option>
-                </select>
-
-            </div>
-
-            <div class="center MarginButton">
-                <a id="btn" class="btnAlerta center">Alertar</a>
-            </div>
 
 
+                <div class="MarginForm">
+
+                    <input type="text" name="name2" id="name2b Alerta" placeholder="Nueva Alerta" class="input Alerta" value="" data-clear-btn="true">
+
+                    </div>
+                    <div class="titlewrap MarginForm">
+
+                        <i class="ion-ios-location dl"></i>
+
+                        <h1 id="Ubicacion" class="title">Ubicando...</h1>
+
+                    </div>
+                    <div class="MarginForm">
+
+                        <select name="select-choice-1" id="select-choice-1b" data-native-menu="false">
+                            <option value="1">Vialidad/Tránsito</option>
+                            <option value="2">Seguridad/Delincuencia</option>
+                            <option value="3">Catástrofes</option>
+                            <option value="4">Clima/Meteorología</option>
+                            <option value="5">Servicios Comunitarios</option>
+                            <option value="6">Desorden público</option>
+                            <option value="8">Otros</option>
+                        </select>
+
+                    </div>
+
+                    <div class="center MarginButton">
+                        <a id="btn2" class="btnAlerta center btnColor"><i class="ion-paper-airplane"></i>Alertar</a>
+                    </div>
 
 
-            </div>
+
+
+                </div>
+       </div>
 
 
         

@@ -151,6 +151,10 @@ $("#btn").click(function () {
     enviarAlertaTexto();
 });
 
+$("#btn2").click(function () {
+    enviarAlertaTexto();
+});
+
 function enviarAlertaTexto() {
     var mAlerta = document.getElementById("name2b Alerta").value;//Alerta
     var IdUsuario = window.localStorage.getItem("idUsuario");//ID USUARIO
@@ -158,7 +162,7 @@ function enviarAlertaTexto() {
     
 
     if (mAlerta != "") {
-        $.post("http://alertux.com/webservice/nueva_alerta.php", { a: mAlerta, u: mUbicacion, lo: LONG, la: LAT, id_u: IdUsuario, pais: mPais, region: mRegion, ciudad: mCiudad, cat: mCategoria }, function () {
+        $.post("http://alertux.com/webservice/nueva_alerta.php", { a: mAlerta, u: mUbicacion, lo: LONG, la: LAT, id_u: IdUsuario, pais: mPais, region: mRegion, ciudad: mCiudad, idcat: mCategoria, cat: mCategoria }, function () {
             window.plugins.toast.showWithOptions(
              {
                  message: "Alerta Enviado exitosamente",

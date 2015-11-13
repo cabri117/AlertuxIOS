@@ -56,7 +56,7 @@ function onDeviceReady() {
 
 $('#IMG').on('click', 'a', function () {
    
-    getPhoto(pictureSource.PHOTOLIBRARY);
+    //getPhoto(pictureSource.PHOTOLIBRARY);
     
    // navigator.camera.getPicture(onSuccess, onFail, {
       // quality: 50,

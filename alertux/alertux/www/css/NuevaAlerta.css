@@ -11,6 +11,8 @@
 
 .MarginForm{
     margin-top: 10%;
+    padding-left: 10px;
+    width: 300px;
 }
 
 html { overflow-y: hidden;
@@ -22,7 +24,7 @@ html { overflow-y: hidden;
 .MarginButton{
     margin-top: 50%;
 
-    padding-top: 30px;
+    padding-top: 50px;
 }
 
 .btnAlerta {
@@ -42,4 +44,25 @@ html { overflow-y: hidden;
 .btnAlerta:hover {
   background: #fc3c3c;
   text-decoration: none;
+}
+
+
+.btnColor{
+    color:#ffffff;
+}
+
+
+.nd2-card {
+    display: block;
+    border-radius: 4px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    margin: 15px auto;
+    max-width: 500px;
+    height: 400px;
+    overflow: hidden;
+    padding-top: 50px;
+}
+
+.Alerta{
+    width: 40px;
 }
