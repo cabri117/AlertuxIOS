@@ -123,14 +123,11 @@
   <preference name="ShowTitle" value="True" />
   <preference name="InAppBrowserStorageEnabled" value="True" />
   <preference name="SuppressesIncrementalRendering" value="True" />
-  <vs:plugin name="org.loicknuchel.cordova.deviceaccounts" version="0.0.1" src="https://github.com/loicknuchel/cordova-device-accounts.git" />
   <vs:plugin name="org.apache.cordova.device" version="0.3.0" />
   <vs:plugin name="org.apache.cordova.network-information" version="0.2.15" />
-  <vs:plugin name="cordova-plugin-x-toast" version="2.2.1" src="https://github.com/EddyVerbruggen/Toast-PhoneGap-Plugin.git" />
   <plugin name="Storage" value="org.apache.cordova.Storage" />
   <preference name="android-minSdkVersion" value="9" />
   <preference name="android-maxSdkVersion" value="23" />
   <preference name="android-targetSdkVersion" value="23" />
   <preference name="AndroidLaunchMode" value="standard" />
-  <vs:plugin name="cordova-plugin-social-message" version="0.3.1" src="https://github.com/leecrossley/cordova-plugin-social-message.git" />
 </widget>

@@ -156,13 +156,6 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/org.loicknuchel.cordova.deviceaccounts/www/DeviceAccounts.js",
-        "id": "org.loicknuchel.cordova.deviceaccounts.DeviceAccounts",
-        "clobbers": [
-            "plugins.DeviceAccounts"
-        ]
-    },
-    {
         "file": "plugins/org.apache.cordova.device/www/device.js",
         "id": "org.apache.cordova.device.device",
         "clobbers": [
@@ -182,24 +175,6 @@ module.exports = [
         "id": "org.apache.cordova.network-information.Connection",
         "clobbers": [
             "Connection"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-x-toast/www/Toast.js",
-        "id": "cordova-plugin-x-toast.Toast",
-        "clobbers": [
-            "window.plugins.toast"
-        ]
-    },
-    {
-        "file": "plugins/cordova-plugin-x-toast/test/tests.js",
-        "id": "cordova-plugin-x-toast.tests"
-    },
-    {
-        "file": "plugins/cordova-plugin-social-message/www/socialmessage.js",
-        "id": "cordova-plugin-social-message.SocialMessage",
-        "clobbers": [
-            "socialmessage"
         ]
     },
     {
@@ -362,11 +337,8 @@ module.exports.metadata =
     "org.apache.cordova.device-orientation": "0.3.11",
     "org.apache.cordova.battery-status": "0.2.12",
     "org.apache.cordova.splashscreen": "1.0.0",
-    "org.loicknuchel.cordova.deviceaccounts": "0.0.1",
     "org.apache.cordova.device": "0.3.0",
     "org.apache.cordova.network-information": "0.2.15",
-    "cordova-plugin-x-toast": "2.2.1",
-    "cordova-plugin-social-message": "0.3.1",
     "org.apache.cordova.file": "1.3.3"
 }
 // BOTTOM OF METADATA

@@ -12,56 +12,62 @@ $(window).load(function () {
 //
 function onLoad() {
     $(".GifImage").fadeIn("slow");
+    // alert("Entro 1");
     document.addEventListener("deviceready", onDeviceReady, false);
 }
 
 // device APIs are available
 //
 function onDeviceReady() {
-    
+    //   alert("Entro 2");
 
-    $("#PerfilBtn").click(function () {
-        window.location.href = "Profile.html";
-    });
+
     // Now safe to use device APIs
     if (checkConnection()) {
-       
-        var string = device.platform;
-        if (string == "iOS") {
-            var value = window.localStorage.getItem("key");
-            if (value != null) {
-                $.ajax({
-                    type: "POST",
-                    url: "http://alertux.com/webservice/consulta_correo.php?correo=" + value,
-                    contentType: "application/json; charset=utf-8",
-                    crossDomain: true,
-                    dataType: 'json',
-                    success: function (response) {
-                        //console.error(JSON.stringify(response));
-                        //iterate through the data using $.each()
-                        var output = '';
-                        $.each(response.usuario, function (index, value) {
-                            output += '<div id="ProfileDiv" class="col-xs-4 center-xs"> <div class="box"> <img class="profile-thumbnail" src="' + value.picture_url + '" /> </div> </div> <div class="col-xs-8"> <div class="box profile-text"> <strong>' + value.fullname + '</strong> </div></div>';
-                            window.localStorage.setItem("idUsuario", value.id_usuario);
-                        });
-             
-                        $('#ProfileRow').append(output);
-                    },
-                    error: function () {
-                        //console.error("error");
-                        
-                    }
-                });
 
-            } else {
-                window.location.href = "Login.html";
-            }
-            
-            
-        } else if (string == "Android") {
+
+
+        var string = device.platform;
+
+
+        //if (string == "iOS" or string == "android") {
+        var value = window.localStorage.getItem("key");
+        if (value != null) {
+            $.ajax({
+                type: "POST",
+                url: "http://alertux.com/webservice/consulta_correo.php?correo=" + value,
+                contentType: "application/json; charset=utf-8",
+                crossDomain: true,
+                dataType: 'json',
+                success: function (response) {
+                    //console.error(JSON.stringify(response));
+                    //iterate through the data using $.each()
+                    var output = '';
+                    $.each(response.usuario, function (index, value) {
+                        output += '<div id="ProfileDiv" class="col-xs-4 center-xs"> <div class="box"> <img class="profile-thumbnail" src="' + value.picture_url + '" /> </div> </div> <div class="col-xs-8"> <div class="box profile-text"> <strong>' + value.fullname + '</strong> </div></div>';
+                        window.localStorage.setItem("idUsuario", value.id_usuario);
+                    });
+
+                    $('#ProfileRow').append(output);
+                },
+                error: function () {
+                    //console.error("error");
+
+                }
+            });
+
+        } else {
+            window.location.href = "Login.html";
+        }
+
+
+        //} 
+        /*else if (string == "android") {
+
             window.plugins.DeviceAccounts.getEmail(function (accounts) {
                 // accounts is an array with objects containing name and type attributes
                 console.log('account registered on this device:', accounts);
+                 alert("account " + accounts);
                 window.localStorage.setItem("key", accounts);
                 $.ajax({
                     type: "POST",
@@ -81,7 +87,7 @@ function onDeviceReady() {
                         $('#ProfileRow').append(output);
                     },
                     error: function () {
-                        //console.error("error");
+                       alert("account " + accounts););
                         
                     }
                 });
@@ -100,18 +106,26 @@ function onDeviceReady() {
                    position: "center",
                    addPixelsY: -40  // added a negative value to move it up a bit (default 0)
                });
-        }
+        }*/
 
         navigator.geolocation.getCurrentPosition(onSuccess, function (error) {
             console.log("Failed to retrieve high accuracy position - trying to retrieve low accuracy");
             navigator.geolocation.getCurrentPosition(onSuccess, onError, { maximumAge: maxAge, timeout: timeout, enableHighAccuracy: false });
         }, { maximumAge: maxAge, timeout: timeout, enableHighAccuracy: true });
+
+
     }
 
-    
+
 }
 
 function checkConnection() {
+    // alert("verifica conexion");
+
+
+    return true;
+
+    alert(Object.keys(navigator.connection));
     var networkState = navigator.connection.type;
 
     var states = {};
@@ -122,21 +136,22 @@ function checkConnection() {
     states[Connection.CELL_3G] = 'Cell 3G connection';
     states[Connection.CELL_4G] = 'Cell 4G connection';
     states[Connection.NONE] = 'No network connection';
-    
+    alert(states[networkState]);
     if (states[networkState] == states[Connection.NONE]) {
         return false
     } else {
-        
-        return true
+
+
 
     }
-    
+
+
 }
 
 
 
 var onSuccess = function (position) {
-    
+
     //  window.alert("Latitude: " + position.coords.latitude + "," + position.coords.longitude);
     window.localStorage.setItem("LastLatitude", position.coords.latitude);
     window.localStorage.setItem("LastLongitude", position.coords.longitude);
@@ -147,14 +162,14 @@ var onSuccess = function (position) {
         crossDomain: true,
         dataType: 'json',
         success: function (response) {
-           
+
             var bandera = "false";
-           // window.alert("sucess");
+            // window.alert("sucess");
             //var json = JSON.stringify(response);
             //window.alert(json);
             $.each(response.results, function (index, value) {
-                
-                
+
+
                 $.each(value.address_components, function (index, v) {
 
                     if (bandera == "false") {
@@ -165,31 +180,31 @@ var onSuccess = function (position) {
                         }
 
                         if (v.types == "administrative_area_level_1,political") {
-                           // window.alert(v.long_name);
+                            // window.alert(v.long_name);
                             window.localStorage.setItem("Region", v.long_name);
                             Region = v.long_name;
                         }
 
 
                         if (v.types == "country,political") {
-                           // window.alert(v.long_name);
+                            // window.alert(v.long_name);
                             window.localStorage.setItem("Pais", v.long_name);
                             Pais = v.long_name;
                             bandera = "true";
                             alertas(Ciudad, Region, Pais);
                         }
-                        
-                    }
-                    
-                    
-                });
-                       
-                    
 
-                
+                    }
+
+
+                });
+
+
+
+
 
             });
-           
+
         },
         error: function () {
             //console.error("error");
@@ -197,31 +212,31 @@ var onSuccess = function (position) {
         }
     });
 
-    
+
 };
 
 function onError(error) {
 
-    window.plugins.toast.showWithOptions(
-            {
-                message: "Active el GPS para mayor precisión",
-                duration: "long",
-                position: "center",
-                addPixelsY: -40  // added a negative value to move it up a bit (default 0)
-            });
+    // window.plugins.toast.showWithOptions(
+    //  {
+    //   message: "Active el GPS para mayor precisión",
+    //  duration: "long",
+    // position: "center",
+    // addPixelsY: -40  // added a negative value to move it up a bit (default 0)
+    //});
 
 
-     Ciudad = window.localStorage.getItem("Ciudad");
-     Region = window.localStorage.getItem("Region");
-     Pais = window.localStorage.getItem("Pais");
+    Ciudad = window.localStorage.getItem("Ciudad");
+    Region = window.localStorage.getItem("Region");
+    Pais = window.localStorage.getItem("Pais");
 
     if (Pais != null) {
-        alertas(Ciudad,Region,Pais);
+        alertas(Ciudad, Region, Pais);
     } else {
         alertas("ciudad", "San Salvador", "El Salvador");
-        
+
     }
-    
+
 };
 
 
@@ -230,7 +245,7 @@ function alertas(Ciudad, Region, Pais) {
 
     $.ajax({
         type: "POST",
-        url: "http://alertux.com/webservice/index.php?pais="+ Pais +"&ciudad="+Ciudad+"&region="+Region+"&versionapp=3.3",
+        url: "http://alertux.com/webservice/index.php?pais=" + Pais + "&ciudad=" + Ciudad + "&region=" + Region + "&versionapp=3.3",
         contentType: "application/json; charset=utf-8",
         crossDomain: true,
         dataType: 'json',
@@ -262,13 +277,13 @@ function alertas(Ciudad, Region, Pais) {
                             var idCard = "." + value.id_alerta + "Card";
                             var Pais = "." + value.id_alerta + "Pais";
 
-                            
-                            
-                            var message = {
-                               
-                                text: "Comparto una alerta en " + $(Pais).html() + " http://alertux.com/redirect/?alerta=" + $(idCard).attr('id')
-                            };
-                            window.socialmessage.send(message);
+                            window.plugins.socialsharing.share('Message only');
+
+                            //var message = {
+
+                            //  text: "Comparto una alerta en " + $(Pais).html() + " http://alertux.com/redirect/?alerta=" + $(idCard).attr('id')
+                            // };
+                            // window.socialmessage.send(message);
                         });//Fin compartir
 
 
@@ -281,21 +296,21 @@ function alertas(Ciudad, Region, Pais) {
                             var FotoPerfil = "." + value.id_alerta + "FotoPerfil";
                             var MedioFoto = "." + value.id_alerta + "MedioFoto";
 
-                            
-                             
-                             window.localStorage.setItem("id-alerta", $(idCard).attr('id'));
-                              window.localStorage.setItem("alerta", $(alerta).html());
-                              window.localStorage.setItem("ubicacion", $(Pais).html());
-                              window.localStorage.setItem("usuarioAlerta", $(UsuarioAlerta).html());
-                              window.localStorage.setItem("FotoPerfil", $(FotoPerfil).attr('src'));
 
-                              if (value.url_multimedia != "") {
-                                  window.localStorage.setItem("CardMedia", $(MedioFoto).attr('src'));
-                              } else {
-                                  window.localStorage.setItem("CardMedia", "");
-                              }
-                              
-                              window.location.href = "Comentar.html";
+
+                            window.localStorage.setItem("id-alerta", $(idCard).attr('id'));
+                            window.localStorage.setItem("alerta", $(alerta).html());
+                            window.localStorage.setItem("ubicacion", $(Pais).html());
+                            window.localStorage.setItem("usuarioAlerta", $(UsuarioAlerta).html());
+                            window.localStorage.setItem("FotoPerfil", $(FotoPerfil).attr('src'));
+
+                            if (value.url_multimedia != "") {
+                                window.localStorage.setItem("CardMedia", $(MedioFoto).attr('src'));
+                            } else {
+                                window.localStorage.setItem("CardMedia", "");
+                            }
+
+                            window.location.href = "Comentar.html";
                         });//Fin comentar
 
                         $(document.body).on('click', '#' + value.id_alerta + 'VerEnMapa', function () {//Boton ver en mapa
@@ -308,7 +323,7 @@ function alertas(Ciudad, Region, Pais) {
                             var MedioFoto = "." + value.id_alerta + "MedioFoto";
                             var CategoriaID = "." + value.id_alerta + "Categoria";
 
-                            
+
                             if (value.longitud != "") {
 
                                 if (value.latitud != "") {
@@ -348,18 +363,18 @@ function alertas(Ciudad, Region, Pais) {
                                                 addPixelsY: -40  // added a negative value to move it up a bit (default 0)
                                             });
                             }//fin else longiotud
-                            
-                           
+
+
                         });//Fin ver en mapa
 
 
                     }//fin categoria
 
-                   
+
                 });//FOR CATEGORIAS
 
             });//FOR ALERTAS
-            
+
             $(".GifImage").fadeOut("fast");
             $('#Alertas').append(output);
             $('#Alertas').fadeIn("slow");
@@ -374,16 +389,16 @@ function alertas(Ciudad, Region, Pais) {
 
 
 function Nuevalertas(Ciudad, Region, Pais) {
-    
+
     var bandera = "false";
     $.ajax({
         type: "POST",
-        url: "http://alertux.com/webservice/masalertas.php?pais=" + Pais + "&ciudad=" + Ciudad + "&region=" + Region + "&id_alerta_ultimo="+id_alerta_ultimo,
+        url: "http://alertux.com/webservice/masalertas.php?pais=" + Pais + "&ciudad=" + Ciudad + "&region=" + Region + "&id_alerta_ultimo=" + id_alerta_ultimo,
         contentType: "application/json; charset=utf-8",
         crossDomain: true,
         dataType: 'json',
         success: function (response) {
-            
+
             //console.error(JSON.stringify(response));
             //iterate through the data using $.each()
             var data =
@@ -411,11 +426,13 @@ function Nuevalertas(Ciudad, Region, Pais) {
                             var idCard = "." + value.id_alerta + "Card";
                             var Pais = "." + value.id_alerta + "Pais";
 
-                            var message = {
+                            window.plugins.socialsharing.share('Message only');
 
-                                text: "Comparto una alerta en " + $(Pais).html() + " http://alertux.com/redirect/?alerta=" + $(idCard).attr('id')
-                            };
-                            window.socialmessage.send(message);
+                            //var message = {
+
+                            // text: "Comparto una alerta en " + $(Pais).html() + " http://alertux.com/redirect/?alerta=" + $(idCard).attr('id')
+                            //  };
+                            // window.socialmessage.send(message);
                         });//Fin compartir
 
 
@@ -444,7 +461,7 @@ function Nuevalertas(Ciudad, Region, Pais) {
                             window.location.href = "Comentar.html";
                         });//Fin comentar
 
-                        
+
 
                         $(document.body).on('click', '#' + value.id_alerta + 'VerEnMapa', function () {//Boton ver en mapa
 
@@ -527,7 +544,7 @@ $("#btnActualizarData").click(function () {
 
     Nuevalertas(Ciudad, Region, Pais);
 
-    
+
 
 });
 
@@ -535,25 +552,25 @@ $("#btnActualizarData").click(function () {
 
 
 //$(document).on("click", "#CompartirBtn", function () {
-    
 
-  //  var message = {
 
-     //   text: "Comparto una alerta en " + $(".card-subtitle").html() + " http://alertux.com/redirect/?alerta=" + $(".nd2-card").attr('id')
-      //  };
-        //   window.socialmessage.send(message);
+//  var message = {
+
+//   text: "Comparto una alerta en " + $(".card-subtitle").html() + " http://alertux.com/redirect/?alerta=" + $(".nd2-card").attr('id')
+//  };
+//   window.socialmessage.send(message);
 //});
 
 
 //$(document).on("click", "#CompartirBtn", function () {
-  //  alert($(".nd2-card").attr('id'));
-  //  window.localStorage.setItem("id-alerta", $(".nd2-card").attr('id'));
-  //  window.localStorage.setItem("alerta", $(".card-supporting-text").html());
-  //  window.localStorage.setItem("ubicacion", $(".card-subtitle").html());
-  //  window.localStorage.setItem("usuarioAlerta", $(".card-primary-title").html());
-  //  window.localStorage.setItem("FotoPerfil", $('.card-avatar').attr('src'));
- //  window.localStorage.setItem("CardMedia", $('.url_multimedia').attr('src'));
- //  window.location.href = "Comentar.html";
+//  alert($(".nd2-card").attr('id'));
+//  window.localStorage.setItem("id-alerta", $(".nd2-card").attr('id'));
+//  window.localStorage.setItem("alerta", $(".card-supporting-text").html());
+//  window.localStorage.setItem("ubicacion", $(".card-subtitle").html());
+//  window.localStorage.setItem("usuarioAlerta", $(".card-primary-title").html());
+//  window.localStorage.setItem("FotoPerfil", $('.card-avatar').attr('src'));
+//  window.localStorage.setItem("CardMedia", $('.url_multimedia').attr('src'));
+//  window.location.href = "Comentar.html";
 
 
 //});

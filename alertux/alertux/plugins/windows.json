@@ -105,19 +105,10 @@
         "org.apache.cordova.vibration": {
             "PACKAGE_NAME": "alertux"
         },
-        "org.loicknuchel.cordova.deviceaccounts": {
-            "PACKAGE_NAME": "alertux"
-        },
         "org.apache.cordova.device": {
             "PACKAGE_NAME": "alertux"
         },
         "org.apache.cordova.network-information": {
-            "PACKAGE_NAME": "alertux"
-        },
-        "cordova-plugin-x-toast": {
-            "PACKAGE_NAME": "alertux"
-        },
-        "cordova-plugin-social-message": {
             "PACKAGE_NAME": "alertux"
         }
     },

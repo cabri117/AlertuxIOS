@@ -49,23 +49,11 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"DeviceAccounts\"><param name=\"android-package\" value=\"org.loicknuchel.cordova.deviceaccounts.DeviceAccounts\" /></feature>",
-                            "count": 1
-                        },
-                        {
                             "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
                             "count": 1
                         },
                         {
                             "xml": "<feature name=\"NetworkStatus\"><param name=\"android-package\" value=\"org.apache.cordova.networkinformation.NetworkManager\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"Toast\"><param name=\"android-package\" value=\"nl.xservices.plugins.Toast\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"SocialMessage\"><param name=\"android-package\" value=\"uk.co.ilee.socialmessage.SocialMessage\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -76,7 +64,7 @@
                     "/*": [
                         {
                             "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
-                            "count": 4
+                            "count": 3
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\" />",
@@ -102,10 +90,6 @@
                     "/manifest": [
                         {
                             "xml": "<uses-permission android:name=\"android.permission.VIBRATE\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\" />",
                             "count": 1
                         }
                     ]
@@ -144,19 +128,10 @@
         "org.apache.cordova.splashscreen": {
             "PACKAGE_NAME": "com.alertux.app"
         },
-        "org.loicknuchel.cordova.deviceaccounts": {
-            "PACKAGE_NAME": "com.alertux.app"
-        },
         "org.apache.cordova.device": {
             "PACKAGE_NAME": "com.alertux.app"
         },
         "org.apache.cordova.network-information": {
-            "PACKAGE_NAME": "com.alertux.app"
-        },
-        "cordova-plugin-x-toast": {
-            "PACKAGE_NAME": "com.alertux.app"
-        },
-        "cordova-plugin-social-message": {
             "PACKAGE_NAME": "com.alertux.app"
         }
     },
